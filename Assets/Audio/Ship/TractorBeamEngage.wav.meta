@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+<<<<<<< .merge_file_a06596
+guid: 7bca790de5f227246ad4dcf1da819045
+timeCreated: 1428746302
+=======
+guid: fb61848313b624541bf24d8cff6e2bbc
+timeCreated: 1428740207
+>>>>>>> .merge_file_a18116
+licenseType: Free
+AudioImporter:
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  preloadAudioData: 1
+  loadInBackground: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

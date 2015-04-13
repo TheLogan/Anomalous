@@ -1,0 +1,58 @@
+On Mission start:
+-----
+
+Jackson: "HQ, I've arrived at the anomaly."
+
+HQ: "Greetings commander, well done. Begin extraction of artifacts immediately."
+
+Jackson: "There's a problem, I'm detecting high amounts of space distortion. I may need to improve the shield capacity of my vessel."
+
+HQ: "Affirmative. Use of deep space automation facility approved."
+
+Jackson: "I'm going to need resources, maybe there's some useful materials inside the anomaly. Wish me luck HQ, I'm going in."
+
+HQ: "Affirmative."
+
+HQ: "... And Jackson?"
+
+Jackson: "Yeah?"
+
+HQ: "Be careful."
+
+Jackson: "I will, Alice. Jackson out."
+
+-----
+
+On scrap pickup:
+-----
+Jackson: "There, some scrap. Alright, gotta take this back to the facility and upgrade my ship."
+
+*HELP* Scrap is used for upgrading your ship, take it to the facility to refine it into materials. 
+-----
+
+On artifact pickup:
+-----
+Jackson: "HQ, I've found something. Sending analysis."
+
+HQ: "Jackson, that's incredible! Take this back to the facility, we might be able to use this for something."
+
+*HELP* Artifacts are used for unlocking special upgrades, take it back the the facility to research it.
+-----
+
+On reaching the middle:
+-----
+HQ: "Jackson?"
+
+HQ: "..."
+
+HQ: "Jackson, please respond!"
+
+Jackson: *Static* "..mazing, HQ, you need to see th.." *Static*
+
+HQ: "Jackson, you're breaking up! Please return to the facility immediately!"
+
+Jackson: *static* "..eres more beyond the horizon. I'll see you all beyo.." *static*
+
+HQ: "All is not lost, he's still alive beyond the horizon."
+
+*TO BE CONTINUED*

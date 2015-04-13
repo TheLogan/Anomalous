@@ -1,0 +1,19 @@
+Library/
+*.sln
+*.csproj
+obj/
+Assets/Realistic Effects Pack/
+Assets/Realistic Effects Pack.meta
+Assets/ICode/
+Assets/Standard Assets/Realistic Effects Pack/
+Assets/Standard Assets/Effects/
+Temp/
+Assets/Standard Assets/Effects.meta
+*.unityproj
+Assets/Sprites/HQ portrait.jpg
+Assets/Sprites/HQ portrait.jpg.meta
+Assets/Sprites/Jackson Portrait.jpg
+Assets/Sprites/Jackson Portrait.jpg.meta
+Assets/Standard Assets/Realistic Effects Pack.meta
+Assets/Textures/AnimatedDistortionCutOutInverted.png
+Assets/Textures/AnimatedDistortionCutOutInverted.png.meta
