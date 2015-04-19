@@ -6,17 +6,13 @@ using System.Collections;
 public class WorldController : MonoBehaviour
 {
 	private List<GameObject> _allGOs;
-	public float _radius;
+	private float _radius;
 	[SerializeField] private float _rotationalForce = 10;
 	[SerializeField] private float bounceDamp = 0.000005f; //how rapidly it bounces
 	private SpaceShip _playerShip;
-
 	public SpaceShip SpaceShip
 	{
-		get
-		{
-			return _playerGo.GetComponent<SpaceShip>();
-		}
+		get { return _playerShip ?? (_playerShip = _playerGo.GetComponent<SpaceShip>()); }
 	}
 
 	private GameObject _playerGo;
@@ -40,27 +36,31 @@ public class WorldController : MonoBehaviour
 
 	void Update()
 	{
-		DamagePlayer();
+		PressurePlayer();
 	}
 
-	void DamagePlayer()
+	void PressurePlayer()
 	{
 		float dist = Vector3.Distance(transform.position, PlayerGo.transform.position);
 		if (dist < _radius)
 		{
-//			_playerGo.GetComponent<SpaceShip>().MyEnergyCore.DoDamage(_radius - dist, Time.deltaTime);
-			SpaceShip.CurrentPressure = _radius - dist;
+			SpaceShip.AddPressure(CalculatePressureLevel(dist));
 
 			if (dist < 2)
 			{
 				PlayerReachedCenter();
 			}
 		}
-		else
-		{
-			SpaceShip.CurrentPressure = 0;
-		}
 	}
+
+	int CalculatePressureLevel(float shipDist)
+	{
+		float layerSize = _radius / 10;
+		float invertedDist = _radius - shipDist;
+		int pressureLevel = (int)(invertedDist / layerSize + 1);
+		return pressureLevel;
+	}
+
 
 	void PlayerReachedCenter()
 	{

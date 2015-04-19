@@ -8,6 +8,8 @@ public class BlackHole : Anomaly
 	[SerializeField]
 	private Rigidbody2D _playerRigid;
 
+	private SpaceShip _playerShip;
+
 	[SerializeField] private Renderer _anomalyRenderer;
 	[SerializeField] private float forceMultiplier;
 	private Color _startColour;
@@ -30,6 +32,7 @@ public class BlackHole : Anomaly
 		{
 			_playerGo = other.gameObject;
 			_playerRigid = other.GetComponent<Rigidbody2D>();
+			_playerShip = _playerGo.GetComponent<SpaceShip>();
 		}
 	}
 
@@ -49,6 +52,8 @@ public class BlackHole : Anomaly
 				float f = _radius - dist;
 				_playerRigid.AddForce((transform.position - _playerGo.transform.position) * f * forceMultiplier);
 			}
+			if (dist < 1)
+				_playerShip.AddPressure(10);
 		}
 	}
 }

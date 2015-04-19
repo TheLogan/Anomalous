@@ -5,6 +5,6 @@ public class EndGameScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GlobalSettings.SendMessage(MessageType.win);
+        GlobalSettings.SendMessage(MessageTypes.win);
 	}
 }

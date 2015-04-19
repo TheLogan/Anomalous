@@ -10,6 +10,6 @@ public class ArtifactItem : PickupableItem
     public override void PickupItem(Inventory inventory)
     {
         inventory.AddArtifact(artifactType);
-        GlobalSettings.SendMessage(MessageType.artifact);
+        GlobalSettings.SendMessage(MessageTypes.artifact);
     }
 }

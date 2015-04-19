@@ -24,7 +24,7 @@ public static class GlobalSettings  {
         return Mathf.Abs(Time.timeScale) < 0.01f;
     }
 
-    public static void SendMessage(MessageType messageType)
+    public static void SendMessage(MessageTypes messageType)
     {
         messageManager.SendMessage(messageType);
     }

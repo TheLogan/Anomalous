@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public enum MessageType { intro, win, scrap, artifact }
+public enum MessageTypes { intro, win, scrap, artifact }
 
 public class MessageManager : MonoBehaviour
 {
@@ -21,7 +21,7 @@ public class MessageManager : MonoBehaviour
     public Sprite male;
     public Sprite help;
 
-    public List<MessageType> usedTypes = new List<MessageType>();
+    public List<MessageTypes> usedTypes = new List<MessageTypes>();
 
     void Awake()
     {
@@ -54,19 +54,19 @@ public class MessageManager : MonoBehaviour
         }
     }
 
-    public void SendMessage(MessageType messageType)
+    public void SendMessage(MessageTypes MessageTypes)
     {
-        if (!usedTypes.Contains(messageType))
+        if (!usedTypes.Contains(MessageTypes))
         {
-            usedTypes.Add(messageType);
+            usedTypes.Add(MessageTypes);
             GlobalSettings.TogglePause(true);
             currentIndex = -1;
             messageInProgress = true;
             canvas.SetActive(true);
 
-            switch (messageType)
+            switch (MessageTypes)
             {
-                case MessageType.intro:
+                case MessageTypes.intro:
                     texts = new List<string>() {"*HELP* Press space/enter to proceed.",
                     "Jackson: \"HQ, I've arrived at the anomaly.\"",
                     "HQ: \"Greetings commander, well done. Begin extraction of artifacts immediately.\"",
@@ -81,7 +81,7 @@ public class MessageManager : MonoBehaviour
                     "*HELP* Reach the middle of the anomaly, the closer to the middle you are, the harsher the environment is."};
                     sprites = new List<Sprite>() {help, male, female, male, female, male, female, female, male, female, male, help};
                     break;
-                case MessageType.win:
+                case MessageTypes.win:
                     texts = new List<string>() {"HQ: \"Jackson?\"",
                     "HQ: \"...\"",
                     "HQ: \"Jackson, please respond!\"",
@@ -96,14 +96,14 @@ public class MessageManager : MonoBehaviour
                     sprites = new List<Sprite>() { female, female, female, male, female, male, male, female, male, female, help};
                     break;
 
-                case MessageType.artifact:
+                case MessageTypes.artifact:
                     texts = new List<string>() {"Jackson: \"HQ, I've found something. Sending analysis.\"",
                     "HQ: \"Jackson, that's incredible! Take this back to the facility, we might be able to use this for something.\"",
                     "*HELP* Artifacts are used for unlocking special upgrades, take it back the the facility to research it."};
                     sprites = new List<Sprite>() { male, female, help};
                     break;
 
-                case MessageType.scrap:
+                case MessageTypes.scrap:
                     texts = new List<string>() {"Jackson: \"There, some scrap. Alright, gotta take this back to the facility and upgrade my ship.\"",
                     "*HELP* Scrap is used for upgrading your ship, take it to the facility to refine it into materials."};
                     sprites = new List<Sprite>() {male, help};

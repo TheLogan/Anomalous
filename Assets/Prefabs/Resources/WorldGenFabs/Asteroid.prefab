@@ -25,11 +25,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 467316}
-  - 33: {fileID: 3301616}
-  - 23: {fileID: 2333204}
   - 114: {fileID: 11495144}
   - 50: {fileID: 5027358}
-  - 247: {fileID: 24712820}
   - 58: {fileID: 5861422}
   m_Layer: 0
   m_Name: Asteroid
@@ -63,30 +60,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 467316}
   m_RootOrder: 0
---- !u!23 &2333204
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194778}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!23 &2377686
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -111,13 +84,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3301616
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194778}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3350286
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -166,16 +132,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rarity: 5
   InitialDistance: 0
---- !u!247 &24712820
-ConstantForce2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194778}
-  m_Enabled: 1
-  m_Force: {x: 0, y: 0}
-  m_RelativeForce: {x: 0, y: 0}
-  m_Torque: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

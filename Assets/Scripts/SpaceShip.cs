@@ -13,7 +13,7 @@ public class SpaceShip : MonoBehaviour
 
 	[SerializeField] private GameObject _explosion;
 
-	public float CurrentPressure { get; set; }
+	[SerializeField] private float _currentPressure;
 	[SerializeField] private VignetteAndChromaticAberration _camVignette;
 
 	[SerializeField] private WorldController worldController;
@@ -48,6 +48,11 @@ public class SpaceShip : MonoBehaviour
 		ApplyMovement();
 	}
 
+	public void AddPressure(int pressureLevel)
+	{
+		_currentPressure += pressureLevel;
+	}
+
 	void ApplyMovement()
 	{
 		float myBoost = inventory.baseThrusterPower;
@@ -75,41 +80,44 @@ public class SpaceShip : MonoBehaviour
 
 	void Update()
 	{
-		if (CurrentPressure > 0)
-		{
-			MyEnergyCore.DoDamage(CurrentPressure);
-
-
-			float myLevel = MyEnergyCore.GetEnergyLevel();
-			float val = (inventory.baseEnergy/myLevel) - 1;
-			print(val);
-			_camVignette.intensity = Mathf.Lerp(0, 20, val); // use current energy upgrade level
-			
-//			GetComponent<Inventory>().baseEnergy
-//			CurrentPressure/WorldController._radius;
-
-
-//			_camVignette.intensity = Mathf.Lerp(0, 20, CurrentPressure / WorldController._radius); // use current energy upgrade level
-		}
-		else
-		{
-			if (_camVignette != null)
-			{
-				_camVignette.intensity = Mathf.Lerp(_camVignette.intensity, 0, Time.deltaTime);
-//				_camVignette.intensity = 0;
-			}
-		}
-
-
+		DamageShip();
+		
 		if (!IsDead && MyEnergyCore.GetEnergyLevel() <= 0)
 		{
+			KillShip();
+		}
+	}
+
+	void KillShip()
+	{
 			IsDead = true;
 			var hq = GameObject.Find("HQ").GetComponent<Respawner>();
 			var go =(GameObject)Instantiate(_explosion, transform.position, Quaternion.identity);
 			Destroy(go, 3);
 			inventory.DropInventory();
 			hq.Die(this);
+	}
+
+	void DamageShip()
+	{
+		if (_currentPressure > 0)
+		{
+			MyEnergyCore.DoDamage(_currentPressure); //TODO divide by armour level
+
+
+			float myLevel = MyEnergyCore.GetEnergyLevel();
+			float val = (inventory.baseEnergy / myLevel) - 1;
+			print(val);
+			_camVignette.intensity = Mathf.Lerp(0, 20, val); // use current energy upgrade level
 		}
+		else
+		{
+			if (_camVignette != null)
+			{
+				_camVignette.intensity = Mathf.Lerp(_camVignette.intensity, 0, Time.deltaTime);
+			}
+		}
+		_currentPressure = 0;
 	}
 	
 	[SerializeField] private Vector3 _mousPos;

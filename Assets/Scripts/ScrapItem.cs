@@ -17,6 +17,6 @@ public class ScrapItem : PickupableItem
     public override void PickupItem(Inventory inventory)
     {
         inventory.AddScrap((int)(baseScrapValue * size));
-        GlobalSettings.SendMessage(MessageType.scrap);
+        GlobalSettings.SendMessage(MessageTypes.scrap);
     }
 }

@@ -72,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -242.100006, y: -9.88000011, z: -.5}
+  m_LocalPosition: {x: -244.9832, y: -6.91886711, z: -.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 466698}
@@ -177,6 +177,7 @@ MonoBehaviour:
   _playerGo: {fileID: 0}
   _playerRigid: {fileID: 0}
   _anomalyRenderer: {fileID: 2338612}
+  forceMultiplier: 3
 --- !u!198 &19818494
 ParticleSystem:
   m_ObjectHideFlags: 1
