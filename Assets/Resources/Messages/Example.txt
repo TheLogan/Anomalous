@@ -1,0 +1,16 @@
+[img][message][endOfLine]
+name:message;
+
+
+"*Tutorial* Press space, enter or the button to proceed.";
+"Jackson: \"HQ, I've arrived at the anomaly.\"";
+"HQ: \"Greetings commander, well done. Begin extraction of artifacts immediately.\"",
+"Jackson: \"There's a problem, I'm detecting high amounts of space distortion. I may need to improve the shield capacity of my vessel.\"",
+"HQ: \"Affirmative. Use of deep space automation facility approved.\"",
+"Jackson: \"I'm going to need resources, maybe there's some useful materials inside the anomaly. Wish me luck HQ, I'm going in.\"",
+"HQ: \"Affirmative.\"",
+"HQ: \"... And Jackson?\"",
+"Jackson: \"Yeah?\"",
+"HQ: \"Be careful.\"",
+"Jackson: \"I will, Alice. Jackson out.\"",
+"*HELP* Reach the middle of the anomaly, the closer to the middle you are, the harsher the environment is."

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public enum MessageTypes { intro, win, scrap, artifact }
 
-public class MessageManager : MonoBehaviour
+public class MessageManagerOld : MonoBehaviour
 {
 
     public Image currentImage;

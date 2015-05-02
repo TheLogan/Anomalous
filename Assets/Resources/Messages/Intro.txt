@@ -1,0 +1,11 @@
+Tutorial:Greetings o wise and powerful player
+Press spacebar or enter to continue...;
+Tutorial:I am your guide in this here adventure;
+Freya:HQ I've arrived!
+Scanning for tachyon radiation;
+Cpt. Angus: .... ;
+Freya:The anomalous readings detected by the long distance array have been confirmed, I don't know what this is, but something is definitely wrong in this quadrant!;
+Cpt. Angus:A science and exploration outpost facility has been dispatched to your position, make good use of it.;
+Cpt. Angus:And Freya...;
+Freya:Yes Captain..?;
+Cpt. Angus:Stay safe;

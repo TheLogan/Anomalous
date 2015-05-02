@@ -5,7 +5,7 @@ using System.Collections;
 public static class GlobalSettings  {
 
     
-    public static MessageManager messageManager;
+    public static MessageManagerOld messageManager;
 
     public static void TogglePause(bool pause)
     {
